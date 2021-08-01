@@ -1,31 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tiendita
+This is a Small Online Shop, using the following libraries
 
-## Getting Started
+- Next Js
+- Chakra UI
+- Firebase
+- Redux
+- Midtrans
+- Nodemailer
 
-First, run the development server:
+## Next Js - Midtrans Simple Integration
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+For procecing the payment this shop is using Midtrans (Indonesian Gateway payment) (midtrans.com) with the Snap method fot simple integration
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create an account to get the private and public Key
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Environment variables
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Create file "next.config.js" and add the following env:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   - REACT_APP_API_KEY
+   - REACT_APP_AUTH_DOMAIN
+   - REACT_APP_PROJECT_ID
+   - REACT_APP_STORAGE_BUCKET
+   - REACT_APP_MESSAGING_SENDER_ID
+   - REACT_APP_APP_ID
+   - REACT_APP_MEASURMENT_ID
 
-## Learn More
+   - MIDTRANS_SERVER_KEY
+   - MIDTRANS_CLIENT_KEY
 
-To learn more about Next.js, take a look at the following resources:
+   - SENDER_EMAIL_HOST
+   - SENDER_EMAIL_PORT
+   - SENDER_EMAIL_USER
+   - SENDER_EMAIL_PASSWORD
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Colaboration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Feel free to create a Pull Request, or just contact me for any Feature idea.
+
 
 ## Deploy on Vercel
 
