@@ -3,8 +3,10 @@ import db from "../lib/firebase";
 
 export function useProduct(props) {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     db.collection("products")
       .orderBy("category")
       .get()
@@ -16,9 +18,10 @@ export function useProduct(props) {
           picture: item.data().picture,
         }));
 
+        setLoading(false);
         setProducts(data);
       });
   }, []);
 
-  return products;
+  return { loading, products };
 }

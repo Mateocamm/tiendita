@@ -4,9 +4,10 @@ import Layout from "../../components/Layout";
 import { useProduct } from "../../hooks/useProduct";
 import { Grid } from "@chakra-ui/react";
 import Product from "../../components/Product";
+import Loading from "../../components/Loading"
 
 export const Index = (props) => {
-  const products = useProduct();
+  const {loading, products} = useProduct();
 
   return (
     <Layout>
@@ -19,6 +20,7 @@ export const Index = (props) => {
           <Product key={product.id} product={product} />
         ))}
       </Grid>
+      {loading && <Loading />}
     </Layout>
   );
 };
