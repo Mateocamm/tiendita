@@ -21,7 +21,7 @@ export const Index = ({ product, addToCart }) => {
     <Box flex="1" p={4}>
       <Image
         boxSize={["100%"]}
-        height={["300px","300px","200px"]}
+        height={["150px","300px","200px"]}
         objectFit="cover"
         fallbackSrc="https://via.placeholder.com/150"
         src={product.picture}
@@ -30,7 +30,7 @@ export const Index = ({ product, addToCart }) => {
         _hover={{ filter: "brightness(1.1)" }}
         
       />
-      <Heading mb={2} fontSize="sm">
+      <Heading title={product.name} mb={2} fontSize="sm" textOverflow="ellipsis" overflow="hidden" whiteSpace="noWrap" width={["150px","200px"]}>
         {product.name}
       </Heading>
       <Text mb={[1, 2]} color="green" fontWeight="bold">

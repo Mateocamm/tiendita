@@ -14,7 +14,7 @@ export const Index = (props) => {
       <Grid
         w="full"
         gridGap="5"
-        gridTemplateColumns="repeat( auto-fit, minmax(200px, 1fr) )"
+        gridTemplateColumns={["repeat( auto-fit, minmax(150px, 1fr))","repeat( auto-fit, minmax(200px, 1fr))"]}
       >
         {products.map((product) => (
           <Product key={product.id} product={product} />
