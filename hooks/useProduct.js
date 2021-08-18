@@ -16,6 +16,7 @@ export function useProduct(props) {
           name: item.data().name,
           price: item.data().price,
           picture: item.data().picture,
+          slug: item.data().slug,
         }));
 
         setLoading(false);

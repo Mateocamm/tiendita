@@ -4,6 +4,7 @@ import { Box, Button, Heading, Image, Text } from "@chakra-ui/react";
 import { addToCart } from "../../actions/cartActions";
 import { FormatCurrency } from "../../lib/currency";
 import { useToast } from "@chakra-ui/react"
+import Link from "next/link"
 
 export const Index = ({ product, addToCart }) => {
   const toast = useToast()
@@ -31,7 +32,7 @@ export const Index = ({ product, addToCart }) => {
         
       />
       <Heading title={product.name} mb={2} fontSize="sm" textOverflow="ellipsis" overflow="hidden" whiteSpace="noWrap" width={["150px","200px"]}>
-        {product.name}
+        <Link href={`/shop/${product.slug}`}>{product.name}</Link>
       </Heading>
       <Text mb={[1, 2]} color="green" fontWeight="bold">
         {FormatCurrency(product.price)}
