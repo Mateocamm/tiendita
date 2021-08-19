@@ -5,9 +5,10 @@ function Index() {
   const date = new Date().getFullYear();
   return (
     <HStack
-      justify="space-between"
+      justify={["center","space-between"]}
       w="100%"
-      display={{ base: "none", md: "flex" }}
+      // display={{ base: "none", md: "flex" }}
+      display="flex"
       py={4}
     >
       <Text fontSize="sm" color={useColorModeValue("gray.500", "gray.600")}>
