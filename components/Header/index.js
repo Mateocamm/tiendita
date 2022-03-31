@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Link from "next/link";
 import { Box, Flex, Heading, Badge } from "@chakra-ui/react";
 import { useScroll } from "../../hooks/useScroll";
+import Logo from "../Logo"
 
 export const Index = ({ countItems }) => {
   const isScroll = useScroll();
@@ -22,15 +23,7 @@ export const Index = ({ countItems }) => {
       <Flex width="full" px={["4", "8"]} margin="0 auto" maxWidth={800}>
         <Link href="/shop">
           <a>
-            <Heading
-              as="h1"
-              size="md"
-              bgGradient="linear(to-l, #7928CA,#FF0080)"
-              bgClip="text"
-              fontWeight="extrabold"
-            >
-              TIENDITA
-            </Heading>
+          <Logo />  
           </a>
         </Link>
 

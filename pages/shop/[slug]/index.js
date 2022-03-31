@@ -6,7 +6,15 @@ import Layout from "../../../components/Layout";
 import { FormatCurrency } from "../../../lib/currency";
 import { addToCart } from "../../../actions/cartActions";
 
-import { Grid, Flex, Button, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Grid,
+  Flex,
+  Button,
+  Heading,
+  Image,
+  Badge,
+  Text,
+} from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
 
 function Index({ product, addToCart }) {
@@ -33,6 +41,8 @@ function Index({ product, addToCart }) {
           <Heading as="h2" fontSize={["2xl", "3xl"]}>
             {product.name}
           </Heading>
+          <Badge my="2">{product.category}</Badge>
+          <Text mb="2">{product.description}</Text>
           <Text mb={[1, 2]} color="green" fontWeight="bold">
             {FormatCurrency(product.price)}
           </Text>

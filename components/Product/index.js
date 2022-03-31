@@ -21,10 +21,12 @@ export const Index = ({ product, addToCart }) => {
   return (
     <Box flex="1" p={4}>
       <Image
-        boxSize={["100%"]}
-        height={["150px","300px","200px"]}
+        // boxSize={["100%"]}
+        width="100%"
+        maxWidth="200px"
+        //height={["150px","300px","200px"]}
         objectFit="cover"
-        fallbackSrc="https://via.placeholder.com/150"
+        fallbackSrc="/images/tiendita-foto.jpg"
         src={product.picture}
         alt={product.name}
         mb={[1, 2]} 

@@ -81,6 +81,7 @@ export const Index = ({ items }) => {
           <FormLabel>Email</FormLabel>
           <Input
             value={email}
+            type="email"
             onChange={(evt) => setEmail(evt.target.value)}
             placeholder="Email"
           />
